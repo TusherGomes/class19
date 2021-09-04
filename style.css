@@ -1,0 +1,432 @@
+/*--------- defult css------------ */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 1550px;
+    margin: 0 auto;
+}
+
+/*------- header ------------*/
+
+
+.menu{
+    background: rgba(0, 0, 0, 0.4);
+}
+.logo{
+    float: left;
+    width: 30%;
+}
+.logo img{
+    width: 84%;
+}
+nav{
+float: right;
+width: 60%;
+}
+nav ul{
+    text-align: right;
+    margin: 0px;   
+}
+nav ul li{
+    display: inline-block;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 63px;
+    transition: .4s;
+    position: relative;
+}
+nav ul li a::before{
+    content: "";
+    width: 0%;
+    height: 4px;
+    top: 100%;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: .5s;
+}
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 4px;
+    top: 100%;
+    right: 50%;
+    position: absolute;
+    background: #fff;
+    transition: .5s;
+}
+nav ul li a:hover::before{
+    width: 50%;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+nav ul li:first-child a{
+    color:rgba(202, 152, 85) ;
+}
+nav ul li:hover>a{
+    color:rgba(202, 152, 85) ;
+}
+
+/*------- HOVER ONE------------ */
+ 
+nav ul li ul{
+    position: absolute;
+    top: 85%;
+    left: -51px;
+    background: #fff;
+    visibility:hidden;
+    opacity: 0;
+    padding-left: 0px;
+    transition: .5s;
+}  
+nav ul li ul li{
+    display: block;
+    width: 300px;
+    transition: .4s;
+}
+nav ul li ul li a{
+    text-decoration: none;
+    display:block;
+    font-size: 21px;
+    border: none;
+    font-weight: 500;
+    color: rgb(12, 11, 11);
+    text-align: center;  
+    transition: .4s; 
+}
+.on li a::before{
+    content: "";
+    display: none;
+}
+.on li a::after{
+    content: "";
+    opacity: 0;
+}
+nav ul li ul li:first-child a{
+    color: black;
+}
+nav ul li ul li:hover a{
+    color:rgba(202, 152, 85) ;
+}
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+} 
+nav ul li ul li:hover> a{
+  background: rgba(49, 45, 45,.4);
+
+}
+
+/* -----------------banner section------------------------ */
+
+header{
+    background-image: url(./img/ia_200000019.jpg);
+    background-size: cover;
+    background-position: center center;
+    padding-bottom: 455px;
+    position: relative;
+    z-index: 9;
+}
+header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width:100%;
+    background: rgba(19, 17, 17, 0.8);
+    z-index: -1;
+
+    
+}
+.text{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 209px;
+}
+.text h1{
+    font-size: 122px;
+    margin-bottom: -48px;
+}
+.text h2{
+    font-size: 50px;
+
+}
+.text h2::before{
+    content: "";
+    height: 3px;
+    width: 104px;
+    background: #fff;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+.text h2::after{
+    content: "";
+    height: 3px;
+    width: 104px;
+    background: #fff;
+    display: inline-block;
+    margin-bottom: 14px;
+
+}
+.text h2 span{
+ width: 10px ;
+ height: 3px;
+ color: #ddd;
+}
+.text a{
+  text-decoration: none;
+font-size: 21px;
+background: rgba(198, 148, 83);
+padding: 19px 47px;
+display: inline-block;
+border-radius: 32px;
+color: #fff;
+transition: .4s;
+}
+.text a:hover{
+    background: #fff;
+    color: rgba(198, 148, 83);
+}
+
+/*-------------------------------- section------------------- */
+
+section{
+     background: rgba(240, 240, 240,.6);
+     padding-bottom: 100px;
+     padding-top: 200px;
+    position: relative;
+}
+.article1{
+    float: left;
+    width: 22.3%;
+    box-sizing: border-box;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.973);
+    margin-left: 40px;
+    padding: 21px 15px;
+    opacity: .9;
+    transition: .5s;
+    cursor: pointer;
+}
+section .article1 span{
+    padding: 20px 0;
+display: inline-block;
+
+}
+section .article1 span img{ 
+  cursor: pointer;
+   width: 135px;
+   transition: .7s;
+}
+section .article1:hover img{
+    transform: rotateY(360deg);  
+}
+section .article1:hover{
+    background: gray;
+}
+section .article1:hover .readmore{
+    background: rgba(250, 247, 244, 0.719);
+    color: rgba(198, 148, 83);
+}
+section .article1 h1{
+    font-size: 24px;
+}
+section .article1  p{
+    font-size: 25px;
+    padding: 0 30px;
+    color: rgb(66, 65, 65);
+}
+
+.readmore{
+    text-decoration: none;
+    padding: 16px 33px;
+    background: rgba(198, 148, 83);
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    margin: 19px 0;
+    display: inline-block;
+    transition: .4s;
+    
+}
+.readmore:hover{
+    background: #000 !important;
+    color: #fff !important;
+    transform: translateY(20px) !important;
+}
+
+
+/*------------ section css youtube and informatjion --------------------*/
+
+.contnt{
+    background: rgba(240, 240, 240,.6);
+    padding-bottom: 200px;
+}
+.youtube{
+    float: left;
+    width: 50%;
+}
+.information{
+    float: right;
+    width: 45%;
+}
+.information h1{
+    font-size: 58px;
+    margin-top: -13px;
+}
+.information h1 span{
+    color:rgba(198, 148, 83) ;
+}
+.information p{
+    font-size: 20px;
+color: gray;
+line-height: 1.6;
+margin-bottom: 36px;
+}
+.information details p{
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+.information details summary{
+    font-size: 20px;
+    font-weight: 500;
+}
+.information a{
+    text-decoration: none;
+display: inline-block;
+padding: 13px 28px;
+background: rgb(0, 0, 0);
+color: #fff;
+margin-top: 24px;
+transition: .4s;
+}
+.information a:hover{
+    color: #fff;
+    background: rgba(198, 148, 83);
+}
+
+/* <!----------------- section class="info --------------------------> */
+
+
+.info{
+    background: none;
+
+}
+.fromm{
+    /* float: left; */
+    width: 40%;
+    display: inline-block;
+    margin-left: 186px;
+    z-index: 1;
+    padding-bottom: 30px;
+margin-bottom: 4px;
+box-sizing: border-box;
+}
+.fromm h1{
+    font-size: 39px;
+}
+.fromm p{
+    font-size: 20px;
+    color: gray;
+    line-height: 1.8;
+    padding: 20px 0;
+   
+}
+
+.fromm .input{
+   
+    width: 100%;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0px 2px 19px #ddd;
+    border-radius: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    color: black;
+    font-weight: 500;
+
+ }
+ .fromm .input:focus{
+     outline: 2px solid rgb(34, 33, 33);
+
+ }
+
+.fromm a{
+    text-decoration: none;
+display: inline-block;
+padding: 13px 28px;
+color: #fff;
+    background: rgba(198, 148, 83);
+margin-top: 24px;
+transition: .4s;
+}
+.fromm a:hover{
+    background: #000;
+    color: #fff;
+}
+
+.imge{
+    display: inline-block;
+    text-align: right;
+    z-index: -1;
+}
+.imge img{width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: rgba(240, 240, 240);
+    box-sizing: border-box;
+}
+
+/*----------------- footer css-------------- */
+
+.footer{
+    background: rgba(109, 109, 109);
+    padding: 10px;
+    color: #fff;
+    margin-top: -46px;
+}
+.te{
+    float: left;
+    width: 50%;
+}
+.te p{
+    font-size: 24px;
+    line-height: 50px;
+}
+.icon{
+    float: right;
+    width: 50%;
+}
+.icon ul{
+    text-align: right;
+    margin-bottom: 0px;
+}
+.icon ul li{
+    list-style: none;
+    display: inline-block;
+}
+.icon ul li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 20px;
+    color: #fff;
+    font-size: 30px;
+    transition: .4s;
+}
+.icon ul li a:hover{
+    color: rgba(198, 148, 83);
+}
